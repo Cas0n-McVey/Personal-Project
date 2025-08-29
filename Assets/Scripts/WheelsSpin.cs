@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class WheelsSpin : MonoBehaviour
 {
-    private float wheelSpeed = 5.0f;
-    private float tiltAngle = 60.0f;
+    private float wheelSpeed = 800.0f;
+    private float tiltAngle = 35.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +20,6 @@ public class WheelsSpin : MonoBehaviour
     }
     void MoveWheels()
     {
-        
+        transform.rotation *= Quaternion.Euler(wheelSpeed * Time.deltaTime, 0, 0);
     }
 }
