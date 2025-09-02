@@ -185,45 +185,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac13ebba5574184caae355861b9af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!146 &86340991
-WheelCollider:
+--- !u!54 &86340995
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86340986}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.37
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &106805311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 880437234669987303, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
@@ -570,45 +558,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac13ebba5574184caae355861b9af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!146 &279245081
-WheelCollider:
+--- !u!54 &279245085
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279245076}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.37
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &314256352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5310670098337031287, guid: 368820312e46de5448a62897b579eb2a, type: 3}
@@ -1096,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5386473045053753748, guid: 368820312e46de5448a62897b579eb2a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6726636311002649322, guid: 368820312e46de5448a62897b579eb2a, type: 3}
       propertyPath: m_TagString
@@ -1402,45 +1378,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac13ebba5574184caae355861b9af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!146 &733293970
-WheelCollider:
+--- !u!54 &733293974
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733293965}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.37
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2931260750048040398, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1900,45 +1864,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac13ebba5574184caae355861b9af80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!146 &1838062004
-WheelCollider:
+--- !u!54 &1838062008
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838061999}
-  serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.37
-  m_SuspensionSpring:
-    spring: 35000
-    damper: 4500
-    targetPosition: 0.5
-  m_SuspensionDistance: 0
-  m_ForceAppPointDistance: 0
-  m_Mass: 20
-  m_WheelDampingRate: 0.25
-  m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
-  m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_Enabled: 1
-  m_ProvidesContacts: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1893243672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1218155764475926811, guid: 368820312e46de5448a62897b579eb2a, type: 3}
@@ -2196,25 +2148,25 @@ PrefabInstance:
       addedObject: {fileID: 733293969}
     - targetCorrespondingSourceObject: {fileID: 1399311795867987040, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 733293970}
+      addedObject: {fileID: 733293974}
     - targetCorrespondingSourceObject: {fileID: 1751550881853033046, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 86340990}
     - targetCorrespondingSourceObject: {fileID: 1751550881853033046, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 86340991}
+      addedObject: {fileID: 86340995}
     - targetCorrespondingSourceObject: {fileID: 1001897089158915517, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 279245080}
     - targetCorrespondingSourceObject: {fileID: 1001897089158915517, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 279245081}
+      addedObject: {fileID: 279245085}
     - targetCorrespondingSourceObject: {fileID: 681494518708695609, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1838062003}
     - targetCorrespondingSourceObject: {fileID: 681494518708695609, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1838062004}
+      addedObject: {fileID: 1838062008}
   m_SourcePrefab: {fileID: 100100000, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
 --- !u!1 &9111804332623832603 stripped
 GameObject:
