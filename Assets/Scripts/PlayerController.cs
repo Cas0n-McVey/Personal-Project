@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 100.0f;
+    private float speed = 115.0f;
     private float zBound = 10.0f;
     private Rigidbody playerRb;
     public AudioSource collisionSound;

@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 public class WheelsSpin : MonoBehaviour
 {
     private float wheelSpeed = 800.0f;
-    private float tiltAngle = 35.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
