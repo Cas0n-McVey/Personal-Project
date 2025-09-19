@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 125.0f;
+    private float speed = 115.0f;
     private float zBound = 10.0f;
     private Rigidbody playerRb;
     public AudioSource collisionSound;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Player has collided with enemy.");
+            Debug.Log("Player has collided with an enemy.");
             Destroy(collision.gameObject, 0.8f);
             collisionSound.Play();
         }

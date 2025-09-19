@@ -22,7 +22,7 @@ public class EnemyHitCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Enemy has collided with enemy.");
+            Debug.Log("Enemy has collided with a player.");
             Destroy(boxCr);
         }
     }
