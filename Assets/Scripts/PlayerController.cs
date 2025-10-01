@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 115.0f;
+    private float speed = 40000.0f;
     private float zBound = 10.0f;
     private Rigidbody playerRb;
     public AudioSource collisionSound;
@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        playerRb.AddForce(Vector3.forward * speed * verticalInput);
-        playerRb.AddForce(Vector3.right * speed * horizontalInput);
+        playerRb.AddForce(Vector3.forward * speed * verticalInput * Time.deltaTime);
+        playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
     }
 
     // Prevent the player from leaving the top or bottom of the screen

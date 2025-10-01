@@ -4,7 +4,7 @@ public class MoveDown : MonoBehaviour
 {
     public float speed = 5.0f;
 
-    private float zDestroy = -14.0f;
+    private float zDestroy = -16.0f;
     private Rigidbody objectRb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +16,7 @@ public class MoveDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        objectRb.AddForce(Vector3.forward * -speed);
+        objectRb.AddForce(Vector3.forward * -speed * Time.deltaTime);
 
         if(transform.position.z < zDestroy)
         {
