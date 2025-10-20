@@ -4,6 +4,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject powerup;
+    private PlayerController playerControllerScript;
 
     private float zEnemySpawn = 15.0f;
     private float zPowerupSpawn = 15.0f;

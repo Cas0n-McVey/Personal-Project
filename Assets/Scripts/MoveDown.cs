@@ -3,14 +3,15 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
     public float speed = 5.0f;
-
     private float zDestroy = -16.0f;
+
     private Rigidbody objectRb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         objectRb = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class MoveDown : MonoBehaviour
     {
         objectRb.AddForce(Vector3.forward * -speed * Time.deltaTime);
 
-        if(transform.position.z < zDestroy)
+        if (transform.position.z < zDestroy)
         {
             Destroy(gameObject);
         }
