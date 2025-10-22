@@ -339,6 +339,8 @@ Transform:
   - {fileID: 1790531719}
   - {fileID: 1418259822}
   - {fileID: 1496352462}
+  - {fileID: 882531499}
+  - {fileID: 2136060887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &173110119
@@ -1499,11 +1501,11 @@ Transform:
   m_GameObject: {fileID: 882531498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 0.693, z: 1.4089999}
+  m_LocalPosition: {x: -0.39, y: 0.19424713, z: 1.4089999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1496352462}
+  m_Father: {fileID: 173110117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &882531500
 ParticleSystemRenderer:
@@ -6602,13 +6604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2586823977646739316, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2136060887}
-    - targetCorrespondingSourceObject: {fileID: 2586823977646739316, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 882531499}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2931260750048040398, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
       insertIndex: -1
@@ -11865,11 +11861,11 @@ Transform:
   m_GameObject: {fileID: 2136060884}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.331, y: 0.693, z: 1.4089999}
+  m_LocalPosition: {x: 0.33099997, y: 0.19424713, z: 1.4089999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1496352462}
+  m_Father: {fileID: 173110117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &223905800031669337
 Transform:
