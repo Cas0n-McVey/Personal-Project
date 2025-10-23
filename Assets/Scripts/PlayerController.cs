@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private float zBound = 10.0f;
 
     private Rigidbody playerRb;
+    private PhysicalLives physicalLives;
     public AudioSource collisionSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,14 +14,13 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         collisionSound = GetComponent<AudioSource>();
+        physicalLives = GetComponent<PhysicalLives>();
     }
 
     // Update is called once per frame
     void Update()
     {
         MovePlayer();
-
-        ConstrainPlayerPosition();
     }
 
     // Moves the player based on wasd input
@@ -54,6 +54,23 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player has collided with an enemy.");
             Destroy(collision.gameObject, 0.8f);
             collisionSound.Play();
+            physicalLives.timesHit++;
+            if (physicalLives.timesHit == 1)
+            {
+                physicalLives.smokeParticle.Play();
+            }
+            if (physicalLives.timesHit == 2)
+            {
+                physicalLives.smokeyParticle.Play();
+            }
+            if (physicalLives.timesHit == 3)
+            {
+                physicalLives.fireParticle.Play();
+            }
+            if (physicalLives.timesHit == 4)
+            {
+                physicalLives.explosionParticle.Play();
+            }
         }
     }
 
