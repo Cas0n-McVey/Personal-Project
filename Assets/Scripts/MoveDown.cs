@@ -11,7 +11,6 @@ public class MoveDown : MonoBehaviour
     void Start()
     {
         objectRb = GetComponent<Rigidbody>();
-        
     }
 
     // Update is called once per frame

@@ -55,18 +55,22 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject, 0.8f);
             collisionSound.Play();
             physicalLives.timesHit++;
+
             if (physicalLives.timesHit == 1)
             {
                 physicalLives.smokeParticle.Play();
             }
+
             if (physicalLives.timesHit == 2)
             {
                 physicalLives.smokeyParticle.Play();
             }
+
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Play();
             }
+
             if (physicalLives.timesHit == 4)
             {
                 physicalLives.explosionParticle.Play();
@@ -80,6 +84,24 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Player has trigger a power up.");
             Destroy(other.gameObject);
+
+            if (physicalLives.timesHit == 1)
+            {
+                physicalLives.smokeParticle.Stop();
+                physicalLives.timesHit--;
+            }
+
+            if (physicalLives.timesHit == 2)
+            {
+                physicalLives.smokeyParticle.Stop();
+                physicalLives.timesHit--;
+            } 
+
+            if (physicalLives.timesHit == 3)
+            {
+                physicalLives.fireParticle.Stop();
+                physicalLives.timesHit--;
+            }
         }
     }
 }
