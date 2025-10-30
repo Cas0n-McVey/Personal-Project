@@ -4,13 +4,13 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject powerup;
-    private PlayerController playerControllerScript;
 
+    private PlayerController playerControllerScript;
+    private GameOverManager gameOverManager;
     private float zEnemySpawn = 15.0f;
     private float zPowerupSpawn = 15.0f;
-    private float xSpawnRange = 14.50f;
+    private float xSpawnRange = 14.0f;
     private float ySpawn = 0.75f;
-
     private float powerupSpawnTime = 5.0f;
     private float enemySpawnTime = 0.25f;
     private float startDelay = 0.0f;
@@ -18,6 +18,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
         InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
         InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTime);
     }
@@ -30,20 +31,26 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomEnemy()
     {
-        float randomX = Random.Range(-xSpawnRange, xSpawnRange);
-        int randomIndex = Random.Range(0, enemies.Length);
+        if (gameOverManager.gameOver == false)
+        {
+            float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+            int randomIndex = Random.Range(0, enemies.Length);
 
-        Vector3 spawnPos = new Vector3(randomX, ySpawn, zEnemySpawn);
+            Vector3 spawnPos = new Vector3(randomX, ySpawn, zEnemySpawn);
 
-        Instantiate(enemies[randomIndex], spawnPos, enemies[randomIndex].gameObject.transform.rotation);
+            Instantiate(enemies[randomIndex], spawnPos, enemies[randomIndex].gameObject.transform.rotation);
+        }
     }
 
     void SpawnPowerup()
     {
-        float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+        if (gameOverManager.gameOver == false)
+        {
+            float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
-        Vector3 spawnPos = new Vector3(randomX, ySpawn, zPowerupSpawn);
+            Vector3 spawnPos = new Vector3(randomX, ySpawn, zPowerupSpawn);
 
-        Instantiate(powerup, spawnPos, powerup.gameObject.transform.rotation);
+            Instantiate(powerup, spawnPos, powerup.gameObject.transform.rotation);
+        }
     }
 }

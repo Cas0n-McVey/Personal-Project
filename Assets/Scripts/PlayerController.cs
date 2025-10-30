@@ -4,9 +4,10 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 40000.0f;
     private float zBound = 10.0f;
-
     private Rigidbody playerRb;
     private PhysicalLives physicalLives;
+    private GameOverManager gameOverManager;
+
     public AudioSource collisionSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         collisionSound = GetComponent<AudioSource>();
         physicalLives = GetComponent<PhysicalLives>();
+        gameOverManager = GetComponent<GameOverManager>();
     }
 
     // Update is called once per frame
@@ -26,11 +28,14 @@ public class PlayerController : MonoBehaviour
     // Moves the player based on wasd input
     void MovePlayer()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        if (gameOverManager.gameOver == false)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-        playerRb.AddForce(Vector3.forward * speed * verticalInput * Time.deltaTime);
-        playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
+            playerRb.AddForce(Vector3.forward * speed * verticalInput * Time.deltaTime);
+            playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
+        }
     }
 
     // Prevent the player from leaving the top or bottom of the screen
@@ -73,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
             if (physicalLives.timesHit == 4)
             {
+                gameOverManager.gameOver = true;
                 physicalLives.explosionParticle.Play();
             }
         }

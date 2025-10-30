@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 173110119}
   - component: {fileID: 173110120}
   - component: {fileID: 173110122}
+  - component: {fileID: 173110124}
   - component: {fileID: 173110123}
   m_Layer: 0
   m_Name: Player
@@ -421,7 +422,7 @@ MonoBehaviour:
   smokeParticle: {fileID: 6618811793465184252}
   smokeyParticle: {fileID: 4691002600793972776}
   fireParticle: {fileID: 8829451550511404928}
-  explosionParticle: {fileID: 0}
+  explosionParticle: {fileID: 2942359539431245657}
   timesHit: 0
 --- !u!82 &173110123
 AudioSource:
@@ -520,6 +521,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &173110124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173110113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc18ec65a80a51e47a6195921ccd7dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: 0
 --- !u!1 &201020190
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2938848470622985515, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4073077062540788037, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
       propertyPath: m_Enabled
@@ -1191,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5386473045053753748, guid: 368820312e46de5448a62897b579eb2a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6726636311002649322, guid: 368820312e46de5448a62897b579eb2a, type: 3}
       propertyPath: m_TagString
