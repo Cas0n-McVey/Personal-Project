@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 40000.0f;
-    private float zBound = 10.0f;
     private Rigidbody playerRb;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
@@ -35,20 +34,6 @@ public class PlayerController : MonoBehaviour
 
             playerRb.AddForce(Vector3.forward * speed * verticalInput * Time.deltaTime);
             playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
-        }
-    }
-
-    // Prevent the player from leaving the top or bottom of the screen
-    void ConstrainPlayerPosition()
-    {
-        if (transform.position.z < -zBound)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -zBound);
-        }
-
-        if (transform.position.z > zBound)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
         }
     }
 
