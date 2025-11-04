@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
+    private GameManager gameManager;
 
     public AudioSource collisionSound;
 
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
         collisionSound = GetComponent<AudioSource>();
         physicalLives = GetComponent<PhysicalLives>();
         gameOverManager = GetComponent<GameOverManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
             if (physicalLives.timesHit == 4)
             {
                 gameOverManager.gameOver = true;
+                gameManager.GameOver();
                 physicalLives.explosionParticle.Play();
             }
         }
