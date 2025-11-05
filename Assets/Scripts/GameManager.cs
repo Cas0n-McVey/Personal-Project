@@ -21,10 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (gameOverManager.gameOver == true)
-        {
             retryButton.gameObject.SetActive(true);
-        }
     }
 
     public void RestartGame()

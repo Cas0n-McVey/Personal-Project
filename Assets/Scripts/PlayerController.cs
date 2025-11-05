@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
                 gameOverManager.gameOver = true;
                 gameManager.GameOver();
                 physicalLives.explosionParticle.Play();
+                physicalLives.explosionParticle2.Play();
+                physicalLives.explosionParticle3.Play();
             }
         }
     }
