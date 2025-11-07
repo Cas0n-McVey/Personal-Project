@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
-        MainMenu();
     }
 
     // Update is called once per frame
