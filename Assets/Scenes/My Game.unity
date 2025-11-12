@@ -1811,8 +1811,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2409,7 +2409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1667319658415146179, guid: 725975069ae98fe4c984f80761909ded, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7559196566000618718, guid: 725975069ae98fe4c984f80761909ded, type: 3}
       propertyPath: m_IsActive
@@ -4032,7 +4032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2931260750048040398, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974132884357341019, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
       propertyPath: m_TagString
@@ -54043,6 +54043,7 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 127122909}
   - {fileID: 1493445198}
   - {fileID: 63801828}
   - {fileID: 2067659630}
@@ -54053,4 +54054,3 @@ SceneRoots:
   - {fileID: 1015885081}
   - {fileID: 1314407023}
   - {fileID: 142939511}
-  - {fileID: 127122909}
