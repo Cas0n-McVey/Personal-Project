@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,8 +12,11 @@ public class ManuManager : MonoBehaviour
     public Button creditsButton;
     public Button quitButton;
     public Button exitCreditsButton;
+    public Button exitButton;
     public TextMeshProUGUI creditsText;
     public Canvas mainMenu;
+    public Canvas creditMenu;
+    public Canvas settingMenu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,5 +33,56 @@ public class ManuManager : MonoBehaviour
     public void StartVideoGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void Settings()
+    {
+        mainMenu.gameObject.SetActive(false);
+
+        settingMenu.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
+    }
+    
+    public void ExitSettings()
+    {
+        mainMenu.gameObject.SetActive(true);
+        playButton.gameObject.SetActive(true);
+        settingsButton.gameObject.SetActive(true);
+        creditsText.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+
+        settingMenu.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(false);
+    }
+
+    public void CreditMenu()
+    {
+        mainMenu.gameObject.SetActive(false);
+
+        creditMenu.gameObject.SetActive(true);
+        creditsText.gameObject.SetActive(true);
+        exitCreditsButton.gameObject.SetActive(true);
+    }
+    
+    public void ExitCreditsMenu()
+    {
+        mainMenu.gameObject.SetActive(true);
+        playButton.gameObject.SetActive(true);
+        settingsButton.gameObject.SetActive(true);
+        creditsText.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+
+        creditMenu.gameObject.SetActive(false);
+        creditsText.gameObject.SetActive(false);
+        exitCreditsButton.gameObject.SetActive(false);
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+            Application.Quit();
+#endif
     }
 }
