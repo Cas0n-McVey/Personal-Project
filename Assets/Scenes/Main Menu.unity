@@ -314,22 +314,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Free Fire VFX - URP by Vefects
+  m_text: 'Welcome to my credits menu!
 
-    Environment Pack - Rocks Stylized
-    by PolyOne Studio
+    (Name) by (Creator)
 
-    Stylized Hypercars by SamRK
 
-    Low Poly Vehicle2 - FREE
-    by Toptopology
+    Free Fire VFX
+    - URP by Vefects
 
-    FREE Sample - New Car Style by Gudamore''s Games
+    Environment Pack - Rocks Stylized by PolyOne Studio
 
-    Sport
-    Car Free by ALlyerEdon
+    Stylized
+    Hypercars by SamRK
 
-    Particle Pack by Unity Technologies'
+    Low Poly Vehicle2 - FREE by Toptopology
+
+    FREE Sample
+    - New Car Style by Gudamore''s Games
+
+    Sport Car Free by ALlyerEdon
+
+    Particle
+    Pack by Unity Technologies'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -338,7 +344,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294934272
   m_fontColor: {r: 0, g: 0.49738646, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -620,7 +626,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2057,7 +2063,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
