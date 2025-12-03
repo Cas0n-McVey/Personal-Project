@@ -13,10 +13,12 @@ public class ManuManager : MonoBehaviour
     public Button quitButton;
     public Button exitCreditsButton;
     public Button exitButton;
+    public Button carExitButton;
     public TextMeshProUGUI creditsText;
     public Canvas mainMenu;
     public Canvas creditMenu;
     public Canvas settingMenu;
+    public Canvas carMenu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +35,22 @@ public class ManuManager : MonoBehaviour
     public void StartVideoGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void CarManu()
+    {
+        mainMenu.gameObject.SetActive(false);
+
+        carMenu.gameObject.SetActive(true);
+        carExitButton.gameObject.SetActive(true);
+    }
+
+    public void CarExit()
+    {
+        mainMenu.gameObject.SetActive(true);
+
+        carMenu.gameObject.SetActive(false);
+        carExitButton.gameObject.SetActive(false);
     }
 
     public void Settings()
