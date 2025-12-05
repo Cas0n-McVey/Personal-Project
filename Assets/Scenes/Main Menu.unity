@@ -183,7 +183,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
     m_HighlightedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
     m_PressedColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1715,7 +1715,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.514151, g: 0.5898677, b: 1, a: 1}
     m_HighlightedColor: {r: 0.19339621, g: 0.32836235, b: 1, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 1, a: 1}
-    m_SelectedColor: {r: 0, g: 0, b: 1, a: 1}
+    m_SelectedColor: {r: 0.2783019, g: 0.2783019, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1773,11 +1773,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515914533}
   m_CullTransparentMesh: 1
---- !u!1 &556719398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1667319658415146179, guid: 725975069ae98fe4c984f80761909ded, type: 3}
-  m_PrefabInstance: {fileID: 891589327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &556719399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9136622060067285541, guid: 725975069ae98fe4c984f80761909ded, type: 3}
@@ -2127,11 +2122,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -311}
   m_SizeDelta: {x: 255.2134, y: 82.0978}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &668656333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2435924811865625894, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
-  m_PrefabInstance: {fileID: 700093556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &668656336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4840579326654075189, guid: 64d00c301cf79964984a799ba60d7eb8, type: 3}
@@ -2337,7 +2327,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
     m_HighlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
     m_PressedColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
-    m_SelectedColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
+    m_SelectedColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2459,7 +2449,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.990566, g: 0.41585082, b: 0.42811382, a: 1}
     m_HighlightedColor: {r: 0.9811321, g: 0.254539, b: 0.26936743, a: 1}
     m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.5188679, g: 0.110137075, b: 0.110137075, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2820,11 +2810,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &827935733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2931260750048040398, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
-  m_PrefabInstance: {fileID: 1025212828}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &827935734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2586823977646739316, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
@@ -4140,11 +4125,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142182929}
   m_CullTransparentMesh: 1
---- !u!1 &1191826334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2938848470622985515, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
-  m_PrefabInstance: {fileID: 1279094578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1191826336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6029347212575846497, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
@@ -4902,7 +4882,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
     m_HighlightedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
     m_PressedColor: {r: 0, g: 0.3254902, b: 1, a: 1}
-    m_SelectedColor: {r: 0, g: 0.3254902, b: 1, a: 1}
+    m_SelectedColor: {r: 0.3160377, g: 0.53866076, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5599,11 +5579,6 @@ MonoBehaviour:
   creditMenu: {fileID: 475579945}
   settingMenu: {fileID: 1651854218}
   carMenu: {fileID: 216184123}
-  freeSample: {fileID: 1191826334}
-  sportCar: {fileID: 668656333}
-  lowPoly: {fileID: 827935733}
-  blueHyperCar: {fileID: 2081013883}
-  redHyperCar: {fileID: 556719398}
 --- !u!1 &1842144698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6421,11 +6396,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053180938}
   m_CullTransparentMesh: 1
---- !u!1 &2081013883 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5386473045053753748, guid: 368820312e46de5448a62897b579eb2a, type: 3}
-  m_PrefabInstance: {fileID: 768281718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2081013884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2239819562919197906, guid: 368820312e46de5448a62897b579eb2a, type: 3}

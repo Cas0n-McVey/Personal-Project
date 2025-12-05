@@ -19,11 +19,6 @@ public class ManuManager : MonoBehaviour
     public Canvas creditMenu;
     public Canvas settingMenu;
     public Canvas carMenu;
-    public GameObject freeSample;
-    public GameObject sportCar;
-    public GameObject lowPoly;
-    public GameObject blueHyperCar;
-    public GameObject redHyperCar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -104,7 +99,7 @@ public class ManuManager : MonoBehaviour
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else
-            Application.Quit();
+        Application.Quit();
 #endif
     }
 }
