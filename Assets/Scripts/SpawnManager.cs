@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     private float xSpawnRange = 14.25f;
     private float ySpawn = 0.75f;
     private float powerupSpawnTime = 5.0f;
-    private float enemySpawnTime = 0.25f;
+    private float enemySpawnTime = 0.20f;
     private float startDelay = 0.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

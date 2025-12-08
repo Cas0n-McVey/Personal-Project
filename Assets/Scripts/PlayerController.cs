@@ -26,15 +26,13 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
 
-    // Moves the player based on wasd input
+    // Moves the player based on A and D input
     void MovePlayer()
     {
         if (gameOverManager.gameOver == false)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
 
-            playerRb.AddForce(Vector3.forward * speed * verticalInput * Time.deltaTime);
             playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
         }
     }
