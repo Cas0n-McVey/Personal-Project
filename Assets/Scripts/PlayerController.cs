@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
 
     public AudioSource collisionSound;
+    public AudioSource explosionSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,9 +67,11 @@ public class PlayerController : MonoBehaviour
             {
                 gameOverManager.gameOver = true;
                 gameManager.GameOver();
+                collisionSound.Stop();
                 physicalLives.explosionParticle.Play();
                 physicalLives.explosionParticle2.Play();
                 physicalLives.explosionParticle3.Play();
+                explosionSound.Play();
             }
         }
     }
