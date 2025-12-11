@@ -19,10 +19,16 @@ public class ManuManager : MonoBehaviour
     public Canvas creditMenu;
     public Canvas settingMenu;
     public Canvas carMenu;
+    public Slider masterSlider;
+    public Slider soundSlider;
+    public Slider musicSlider;
+    public AudioSource music;
+
+    private PlayerController playerControllerScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        music = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,7 +65,22 @@ public class ManuManager : MonoBehaviour
         settingMenu.gameObject.SetActive(true);
         exitButton.gameObject.SetActive(true);
     }
-    
+
+    public void MasterVolume()
+    {
+
+    }
+
+    public void Sound()
+    {
+        
+    }
+
+    public void Music()
+    {
+        
+    }
+
     public void ExitSettings()
     {
         mainMenu.gameObject.SetActive(true);
