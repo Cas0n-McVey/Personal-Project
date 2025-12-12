@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,12 +24,16 @@ public class ManuManager : MonoBehaviour
     public Slider soundSlider;
     public Slider musicSlider;
     public AudioSource music;
+    public AudioMixer masterMixer;
 
     private PlayerController playerControllerScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         music = GetComponent<AudioSource>();
+        masterSlider.value = GetMasterVolume();
+        soundSlider.value = GetSfxVolume();
+        musicSlider.value = GetMusicVolume();
     }
 
     // Update is called once per frame
@@ -66,9 +71,37 @@ public class ManuManager : MonoBehaviour
         exitButton.gameObject.SetActive(true);
     }
 
-    public void MasterVolume()
+    public static float GetMusicVolume()
     {
+        return PlayerPrefs.GetFloat("MusicVolume", 1);
+    }
 
+    public void SetMusicVolume(float soundLevel)
+    {
+        PlayerPrefs.SetFloat("MusicVolume", soundLevel);
+        masterMixer.SetFloat("MusicVol", soundLevel);
+    }
+
+    public static float GetSfxVolume()
+    {
+        return PlayerPrefs.GetFloat("SFXVolume", 1);
+    }
+
+    public void SetSfxVolume(float soundLevel)
+    {
+        PlayerPrefs.SetFloat("SFXVolume", soundLevel);
+        masterMixer.SetFloat("SFXVol", soundLevel);
+    }
+
+    public static float GetMasterVolume()
+    {
+        return PlayerPrefs.GetFloat("MasterVolume", 1);
+    }
+
+    public void SetMasterVolume(float soundLevel)
+    {
+        PlayerPrefs.SetFloat("MasterVolume", soundLevel);
+        masterMixer.SetFloat("MasterVol", soundLevel);
     }
 
     public void Sound()

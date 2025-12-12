@@ -811,20 +811,20 @@ MonoBehaviour:
   m_FillRect: {fileID: 1035014500}
   m_HandleRect: {fileID: 588859023}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2787,13 +2787,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 488776329}
   m_HandleRect: {fileID: 985554331}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: SetSfxVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &827935734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2586823977646739316, guid: 2430b34a14352c84c84f5432d5256d97, type: 3}
@@ -3136,13 +3148,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 772756898}
   m_HandleRect: {fileID: 1362705264}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &891589327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5704,6 +5728,7 @@ MonoBehaviour:
   soundSlider: {fileID: 790828930}
   musicSlider: {fileID: 871117802}
   music: {fileID: 1820388435}
+  masterMixer: {fileID: 24100000, guid: 5e94e1eb1b7309a4cbb545e1771d4f61, type: 2}
 --- !u!82 &1820388435
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5713,7 +5738,7 @@ AudioSource:
   m_GameObject: {fileID: 1820388431}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -963203238354916527, guid: 5e94e1eb1b7309a4cbb545e1771d4f61, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e0d1a5f314d72234b955bd1c2307d847, type: 3}
   m_PlayOnAwake: 1
