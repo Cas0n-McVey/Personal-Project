@@ -102,4 +102,17 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Makes a blue line face in the direction where the player is facing and make a blue sphere
+    /// </summary>
+    private void OnDrawGizmosSelected()
+    {
+        // Makes the color blue
+        Gizmos.color = Color.blue;
+        // Draws a line
+        Gizmos.DrawLine(transform.position, transform.forward * 500f);
+        // Draws a sphere
+        Gizmos.DrawSphere(transform.position, 1f);
+    }
 }
