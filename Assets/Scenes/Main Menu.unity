@@ -202,7 +202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 26423363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: SportCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &26423363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,7 +1730,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515914536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: HyperCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515914536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2311,7 +2335,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
     m_HighlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
     m_PressedColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
-    m_SelectedColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
+    m_SelectedColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2330,7 +2354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 692803441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: FreeSample
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &692803441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2452,7 +2488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 695769415}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: RedHyperCar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &695769415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,7 +5093,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1547661129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820388434}
+        m_TargetAssemblyTypeName: ManuManager, Assembly-CSharp
+        m_MethodName: LowPoly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1547661129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5720,6 +5780,11 @@ MonoBehaviour:
   exitButton: {fileID: 1666941685}
   carExitButton: {fileID: 2053180940}
   creditsText: {fileID: 201709240}
+  freeSampleText: {fileID: 1142182931}
+  hyperCarText: {fileID: 113838734}
+  redHyperCarText: {fileID: 236618400}
+  sportCarText: {fileID: 1084092529}
+  lowPolyText: {fileID: 673506378}
   mainMenu: {fileID: 2015696414}
   creditMenu: {fileID: 475579945}
   settingMenu: {fileID: 1651854218}

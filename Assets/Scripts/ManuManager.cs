@@ -2,6 +2,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,6 +17,11 @@ public class ManuManager : MonoBehaviour
     public Button exitButton;
     public Button carExitButton;
     public TextMeshProUGUI creditsText;
+    [SerializeField] private TextMeshProUGUI freeSampleText;
+    [SerializeField] private TextMeshProUGUI hyperCarText;
+    [SerializeField] private TextMeshProUGUI redHyperCarText;
+    [SerializeField] private TextMeshProUGUI sportCarText;
+    [SerializeField] private TextMeshProUGUI lowPolyText;
     public Canvas mainMenu;
     public Canvas creditMenu;
     public Canvas settingMenu;
@@ -53,6 +59,46 @@ public class ManuManager : MonoBehaviour
 
         carMenu.gameObject.SetActive(true);
         carExitButton.gameObject.SetActive(true);
+    }
+
+    public void FreeSample()
+    {
+        if(freeSampleText != null)
+        {
+            freeSampleText.text = "Selected";
+        }
+    }
+
+    public void HyperCar()
+    {
+        if (hyperCarText != null)
+        {
+            hyperCarText.text = "Selected";
+        }
+    }
+
+    public void RedHyperCar()
+    {
+        if (redHyperCarText != null)
+        {
+            redHyperCarText.text = "Selected";
+        }
+    }
+
+    public void SportCar()
+    {
+        if (sportCarText != null)
+        {
+            sportCarText.text = "Selected";
+        }
+    }
+
+    public void LowPoly()
+    {
+        if (lowPolyText != null)
+        {
+            lowPolyText.text = "Selected";
+        }
     }
 
     public void CarExit()
@@ -102,16 +148,6 @@ public class ManuManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MasterVolume", soundLevel);
         masterMixer.SetFloat("MasterVol", soundLevel);
-    }
-
-    public void Sound()
-    {
-        
-    }
-
-    public void Music()
-    {
-        
     }
 
     public void ExitSettings()
