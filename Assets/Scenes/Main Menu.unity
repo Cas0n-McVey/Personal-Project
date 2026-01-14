@@ -5071,10 +5071,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+    m_NormalColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
     m_HighlightedColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-    m_PressedColor: {r: 0, g: 0.3254902, b: 1, a: 1}
-    m_SelectedColor: {r: 0.3160377, g: 0.53866076, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.23529412, b: 1, a: 1}
+    m_SelectedColor: {r: 0.3160377, g: 0.4117647, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5780,11 +5780,6 @@ MonoBehaviour:
   exitButton: {fileID: 1666941685}
   carExitButton: {fileID: 2053180940}
   creditsText: {fileID: 201709240}
-  freeSampleText: {fileID: 1142182931}
-  hyperCarText: {fileID: 113838734}
-  redHyperCarText: {fileID: 236618400}
-  sportCarText: {fileID: 1084092529}
-  lowPolyText: {fileID: 673506378}
   mainMenu: {fileID: 2015696414}
   creditMenu: {fileID: 475579945}
   settingMenu: {fileID: 1651854218}
@@ -5794,6 +5789,11 @@ MonoBehaviour:
   musicSlider: {fileID: 871117802}
   music: {fileID: 1820388435}
   masterMixer: {fileID: 24100000, guid: 5e94e1eb1b7309a4cbb545e1771d4f61, type: 2}
+  freeSampleText: {fileID: 1142182931}
+  hyperCarText: {fileID: 113838734}
+  redHyperCarText: {fileID: 236618400}
+  sportCarText: {fileID: 1084092529}
+  lowPolyText: {fileID: 673506378}
 --- !u!82 &1820388435
 AudioSource:
   m_ObjectHideFlags: 0

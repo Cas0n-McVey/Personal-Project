@@ -17,11 +17,7 @@ public class ManuManager : MonoBehaviour
     public Button exitButton;
     public Button carExitButton;
     public TextMeshProUGUI creditsText;
-    [SerializeField] private TextMeshProUGUI freeSampleText;
-    [SerializeField] private TextMeshProUGUI hyperCarText;
-    [SerializeField] private TextMeshProUGUI redHyperCarText;
-    [SerializeField] private TextMeshProUGUI sportCarText;
-    [SerializeField] private TextMeshProUGUI lowPolyText;
+   
     public Canvas mainMenu;
     public Canvas creditMenu;
     public Canvas settingMenu;
@@ -32,7 +28,12 @@ public class ManuManager : MonoBehaviour
     public AudioSource music;
     public AudioMixer masterMixer;
 
-    private PlayerController playerControllerScript;
+    private PlayerController playerControllerScript; 
+    [SerializeField] private TextMeshProUGUI freeSampleText;
+    [SerializeField] private TextMeshProUGUI hyperCarText;
+    [SerializeField] private TextMeshProUGUI redHyperCarText;
+    [SerializeField] private TextMeshProUGUI sportCarText;
+    [SerializeField] private TextMeshProUGUI lowPolyText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
