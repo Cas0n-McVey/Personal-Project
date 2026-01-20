@@ -1,16 +1,20 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 40000.0f;
+    public AudioSource collisionSound;
+    public AudioSource explosionSound;
+
+    private float speed = 50000.0f;
     private Rigidbody playerRb;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
     private GameManager gameManager;
-
-    public AudioSource collisionSound;
-    public AudioSource explosionSound;
+    private float horizontalInput;
+    private float verticalInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,9 +37,16 @@ public class PlayerController : MonoBehaviour
     {
         if (gameOverManager.gameOver == false)
         {
-            float horizontalInput = Input.GetAxis("Horizontal");
-
             playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
+        }
+    }
+
+    public void OnMove(InputValue inputValue)
+    {
+        if (gameOverManager.gameOver == false)
+        {
+            horizontalInput = inputValue.Get<Vector2>().x;
+            verticalInput = inputValue.Get<Vector2>().y;
         }
     }
 
