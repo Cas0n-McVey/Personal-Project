@@ -41,8 +41,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// To move in the new input system
+    /// </summary>
+    /// <param name="inputValue"></param>
     public void OnMove(InputValue inputValue)
     {
+        // to stop the player from moving whenever a gameover happens
         if (gameOverManager.gameOver == false)
         {
             horizontalInput = inputValue.Get<Vector2>().x;
