@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private GameOverManager gameOverManager;
     private GameManager gameManager;
     private float horizontalInput;
-    private float verticalInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,7 +50,6 @@ public class PlayerController : MonoBehaviour
         if (gameOverManager.gameOver == false)
         {
             horizontalInput = inputValue.Get<Vector2>().x;
-            verticalInput = inputValue.Get<Vector2>().y;
         }
     }
 

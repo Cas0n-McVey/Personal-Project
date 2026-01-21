@@ -13,7 +13,7 @@ public class SpawnManager : MonoBehaviour
     private float itemYSpawn = 0.25f;
     private float enemyYSpawn = 0.5f;
     private float powerupSpawnTime = 5.0f;
-    private float enemySpawnTime = 0.15f;
+    private float enemySpawnTime = 0.145f;
     private float startDelay = 0.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
