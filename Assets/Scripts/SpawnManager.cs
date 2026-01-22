@@ -3,14 +3,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemies;
-    public GameObject powerup;
+    public GameObject[] powerup;
 
     private PlayerController playerControllerScript;
     private GameOverManager gameOverManager;
     private float zEnemySpawn = 15.0f;
     private float zPowerupSpawn = 15.0f;
     private float xSpawnRange = 14.25f;
-    private float itemYSpawn = 0.25f;
+    private float itemYSpawn = 0.30f;
     private float enemyYSpawn = 0.5f;
     private float powerupSpawnTime = 5.0f;
     private float enemySpawnTime = 0.145f;
@@ -48,10 +48,11 @@ public class SpawnManager : MonoBehaviour
         if (gameOverManager.gameOver == false)
         {
             float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+            int randomIndex = Random.Range(0, powerup.Length);
 
             Vector3 spawnPos = new Vector3(randomX, itemYSpawn, zPowerupSpawn);
 
-            Instantiate(powerup, spawnPos, powerup.gameObject.transform.rotation);
+            Instantiate(powerup[randomIndex], spawnPos, powerup[randomIndex].gameObject.transform.rotation);
         }
     }
 }

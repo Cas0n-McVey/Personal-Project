@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource explosionSound;
 
     private float speed = 50000.0f;
+    private float duration = 2f;
     private Rigidbody playerRb;
+    private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
     private GameManager gameManager;
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        boxCr = GetComponent<BoxCollider>();
         playerRb = GetComponent<Rigidbody>();
         collisionSound = GetComponent<AudioSource>();
         physicalLives = GetComponent<PhysicalLives>();
@@ -113,6 +117,31 @@ public class PlayerController : MonoBehaviour
             {
                 physicalLives.fireParticle.Stop();
                 physicalLives.timesHit--;
+            }
+        }
+
+        if(other.gameObject.CompareTag("Powerful"))
+        {
+            Debug.Log("Player has trigger a power up.");
+            Destroy(other.gameObject);
+
+            if(physicalLives.timesHit < 4)
+            {
+                StartCoroutine(DisableAndReEnableCollider());
+            }
+        }
+
+        IEnumerator DisableAndReEnableCollider()
+        {
+            if (boxCr != null)
+            {
+                boxCr.enabled = false; // Disable the collider
+                Debug.Log("Collider Disabled");
+
+                yield return new WaitForSeconds(duration); // Wait for the specified time
+
+                boxCr.enabled = true; // Re-enable the collider
+                Debug.Log("Collider Re-enabled");
             }
         }
     }
