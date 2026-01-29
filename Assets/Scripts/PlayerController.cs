@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource explosionSound;
 
     private float speed = 50000.0f;
-    private float duration = 2f;
+    private float duration = 5f;
     private Rigidbody playerRb;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
         if(other.gameObject.CompareTag("Powerful"))
         {
-            Debug.Log("Player has trigger a power up.");
+            Debug.Log("Player has I-frames");
             Destroy(other.gameObject);
 
             if(physicalLives.timesHit < 4)

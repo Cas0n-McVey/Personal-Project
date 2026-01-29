@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 173110116}
   - component: {fileID: 173110115}
   - component: {fileID: 173110121}
+  - component: {fileID: 173110126}
   - component: {fileID: 173110119}
   - component: {fileID: 173110120}
   - component: {fileID: 173110122}
@@ -759,6 +760,27 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!135 &173110126
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173110113}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0.00842613, y: 1.9195125, z: 0}
 --- !u!1 &201020190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2105,7 @@ GameObject:
   - component: {fileID: 491323903}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3783,7 +3805,7 @@ GameObject:
   - component: {fileID: 2115817332}
   m_Layer: 0
   m_Name: Wall 2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
