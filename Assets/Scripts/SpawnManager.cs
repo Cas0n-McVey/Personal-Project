@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
     private float zEnemySpawn = 15.0f;
     private float zPowerupSpawn = 15.0f;
     private float xSpawnRange = 14.25f;
-    private float itemYSpawn = 0.30f;
+    private float itemYSpawn = 0.00f;
     private float enemyYSpawn = 0.5f;
     private float powerupSpawnTime = 5.0f;
     private float enemySpawnTime = 0.145f;

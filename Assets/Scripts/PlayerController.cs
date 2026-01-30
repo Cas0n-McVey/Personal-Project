@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource explosionSound;
 
     private float speed = 50000.0f;
-    private float duration = 5f;
+    private float duration = 4.5f;
     private Rigidbody playerRb;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player has I-frames");
             Destroy(other.gameObject);
 
-            if(physicalLives.timesHit < 4)
+            if (physicalLives.timesHit < 4)
             {
                 StartCoroutine(DisableAndReEnableCollider());
             }
@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
         {
             if (boxCr != null)
             {
+                physicalLives.iFrames.Play();
                 boxCr.enabled = false; // Disable the collider
                 Debug.Log("Collider Disabled");
 
@@ -142,6 +143,7 @@ public class PlayerController : MonoBehaviour
 
                 boxCr.enabled = true; // Re-enable the collider
                 Debug.Log("Collider Re-enabled");
+                physicalLives.iFrames.Stop();
             }
         }
     }

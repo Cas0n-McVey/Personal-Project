@@ -8,6 +8,7 @@ public class PhysicalLives : MonoBehaviour
     public ParticleSystem explosionParticle;
     public ParticleSystem explosionParticle2;
     public ParticleSystem explosionParticle3;
+    public ParticleSystem iFrames;
     public int timesHit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -17,7 +17,6 @@ public class ManuManager : MonoBehaviour
     public Button exitButton;
     public Button carExitButton;
     public TextMeshProUGUI creditsText;
-   
     public Canvas mainMenu;
     public Canvas creditMenu;
     public Canvas settingMenu;
