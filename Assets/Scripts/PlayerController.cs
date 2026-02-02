@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource explosionSound;
 
     private float speed = 50000.0f;
-    private float duration = 4.5f;
+    private float iFramesDuration = 4.5f;
     private Rigidbody playerRb;
+    private Renderer objectRenderer;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         boxCr = GetComponent<BoxCollider>();
+        objectRenderer = GetComponent<Renderer>();
         playerRb = GetComponent<Rigidbody>();
         collisionSound = GetComponent<AudioSource>();
         physicalLives = GetComponent<PhysicalLives>();
@@ -128,6 +130,7 @@ public class PlayerController : MonoBehaviour
             if (physicalLives.timesHit < 4)
             {
                 StartCoroutine(DisableAndReEnableCollider());
+                StartCoroutine(FadeTo(0.0f, 2.0f));
             }
         }
 
@@ -139,12 +142,30 @@ public class PlayerController : MonoBehaviour
                 boxCr.enabled = false; // Disable the collider
                 Debug.Log("Collider Disabled");
 
-                yield return new WaitForSeconds(duration); // Wait for the specified time
+                yield return new WaitForSeconds(iFramesDuration); // Wait for the specified time
 
                 boxCr.enabled = true; // Re-enable the collider
                 Debug.Log("Collider Re-enabled");
                 physicalLives.iFrames.Stop();
             }
+        }
+
+        IEnumerator FadeTo(float targetAlpha, float duration)
+        {
+            Color startColor = objectRenderer.material.color;
+            float startAlpha = startColor.a;
+            float rate = 1.0f / duration;
+            float progress = 0.0f;
+            
+            while (progress < 1.0f)
+            {
+                progress += Time.deltaTime * rate;
+                float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, progress);
+
+                objectRenderer.material.color = new Color(startColor.r , startColor.g, startColor.b, newAlpha);
+            }
+
+            yield return new WaitForSeconds(duration);
         }
     }
 
