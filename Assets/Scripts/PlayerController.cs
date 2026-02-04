@@ -58,6 +58,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// For the Canvas Input script
+    /// </summary>
+    /// <param name="newMoveDir"></param>
+    public void MoveInput(Vector2 newMoveDir)
+    {
+        horizontalInput = newMoveDir.x;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
