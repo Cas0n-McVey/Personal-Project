@@ -36,6 +36,7 @@ public class ManuManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // My music and sound effect
         music = GetComponent<AudioSource>();
         masterSlider.value = GetMasterVolume();
         soundSlider.value = GetSfxVolume();
@@ -117,33 +118,57 @@ public class ManuManager : MonoBehaviour
         exitButton.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// returns the music volume you assign in the setting
+    /// </summary>
+    /// <returns></returns>
     public static float GetMusicVolume()
     {
         return PlayerPrefs.GetFloat("MusicVolume", 1);
     }
 
+    /// <summary>
+    /// The sound level of the music
+    /// </summary>
+    /// <param name="soundLevel"></param>
     public void SetMusicVolume(float soundLevel)
     {
         PlayerPrefs.SetFloat("MusicVolume", soundLevel);
         masterMixer.SetFloat("MusicVol", soundLevel);
     }
 
+    /// <summary>
+    /// returns the sound volume you assign in the setting
+    /// </summary>
+    /// <returns></returns>
     public static float GetSfxVolume()
     {
         return PlayerPrefs.GetFloat("SFXVolume", 1);
     }
 
+    /// <summary>
+    /// The sound level of the sounds
+    /// </summary>
+    /// <param name="soundLevel"></param>
     public void SetSfxVolume(float soundLevel)
     {
         PlayerPrefs.SetFloat("SFXVolume", soundLevel);
         masterMixer.SetFloat("SFXVol", soundLevel);
     }
 
+    /// <summary>
+    /// returns the music and sound volume you assign in the setting
+    /// </summary>
+    /// <returns></returns>
     public static float GetMasterVolume()
     {
         return PlayerPrefs.GetFloat("MasterVolume", 1);
     }
 
+    /// <summary>
+    ///  The sound level of the music and sounds
+    /// </summary>
+    /// <param name="soundLevel"></param>
     public void SetMasterVolume(float soundLevel)
     {
         PlayerPrefs.SetFloat("MasterVolume", soundLevel);
