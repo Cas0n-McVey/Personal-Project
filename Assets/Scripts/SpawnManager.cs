@@ -4,6 +4,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject[] powerup;
+    public GameObject[] cars;
 
     private PlayerController playerControllerScript;
     private GameOverManager gameOverManager;
@@ -20,6 +21,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
+        SpawnCar();
         InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
         InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTime);
     }
@@ -54,5 +56,14 @@ public class SpawnManager : MonoBehaviour
 
             Instantiate(powerup[randomIndex], spawnPos, powerup[randomIndex].gameObject.transform.rotation);
         }
+    }
+
+    void SpawnCar()
+    {
+        foreach (GameObject car in cars)
+        {
+            car.SetActive(false);
+        }
+        cars[ManuManager.carSelected].SetActive(true);
     }
 }

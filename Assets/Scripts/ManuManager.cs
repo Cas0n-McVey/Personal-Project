@@ -26,6 +26,7 @@ public class ManuManager : MonoBehaviour
     public Slider musicSlider;
     public AudioSource music;
     public AudioMixer masterMixer;
+    public static int carSelected = 0;
 
     private PlayerController playerControllerScript; 
     [SerializeField] private TextMeshProUGUI freeSampleText;
@@ -67,6 +68,12 @@ public class ManuManager : MonoBehaviour
         if(freeSampleText != null)
         {
             freeSampleText.text = "Selected";
+            hyperCarText.text = "Select";
+            redHyperCarText.text = "Select";
+            sportCarText.text = "Select";
+            lowPolyText.text = "Select";
+
+            carSelected = 0;
         }
     }
 
@@ -74,7 +81,13 @@ public class ManuManager : MonoBehaviour
     {
         if (hyperCarText != null)
         {
+            freeSampleText.text = "Select";
             hyperCarText.text = "Selected";
+            redHyperCarText.text = "Select";
+            sportCarText.text = "Select";
+            lowPolyText.text = "Select";
+
+            carSelected = 1;
         }
     }
 
@@ -82,7 +95,13 @@ public class ManuManager : MonoBehaviour
     {
         if (redHyperCarText != null)
         {
+            freeSampleText.text = "Select";
+            hyperCarText.text = "Select";
             redHyperCarText.text = "Selected";
+            sportCarText.text = "Select";
+            lowPolyText.text = "Select";
+
+            carSelected = 2;
         }
     }
 
@@ -90,7 +109,13 @@ public class ManuManager : MonoBehaviour
     {
         if (sportCarText != null)
         {
+            freeSampleText.text = "Select";
+            hyperCarText.text = "Select";
+            redHyperCarText.text = "Select";
             sportCarText.text = "Selected";
+            lowPolyText.text = "Select";
+
+            carSelected = 3;
         }
     }
 
@@ -98,7 +123,13 @@ public class ManuManager : MonoBehaviour
     {
         if (lowPolyText != null)
         {
+            freeSampleText.text = "Select";
+            hyperCarText.text = "Select";
+            redHyperCarText.text = "Select";
+            sportCarText.text = "Select";
             lowPolyText.text = "Selected";
+
+            carSelected = 4;
         }
     }
 

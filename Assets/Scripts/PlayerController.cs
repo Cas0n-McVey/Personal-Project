@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -12,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private float speed = 50000.0f;
     private float iFramesDuration = 4.8f;
     private Rigidbody playerRb;
-    private Renderer objectRenderer;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
@@ -89,17 +89,19 @@ public class PlayerController : MonoBehaviour
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Play();
+                physicalLives.headLight.enabled = false;
             }
 
             if (physicalLives.timesHit == 4)
             {
                 gameOverManager.gameOver = true;
+                physicalLives.headLight2.enabled = false;
                 gameManager.GameOver();
                 collisionSound.Stop();
+                explosionSound.Play();
                 physicalLives.explosionParticle.Play();
                 physicalLives.explosionParticle2.Play();
                 physicalLives.explosionParticle3.Play();
-                explosionSound.Play();
             }
         }
     }
