@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource collisionSound;
     public AudioSource explosionSound;
 
-    private float speed = 50000.0f;
+    private float speed = 47500.0f;
     private float iFramesDuration = 4.8f;
     private Rigidbody playerRb;
     private BoxCollider boxCr;
@@ -129,6 +129,7 @@ public class PlayerController : MonoBehaviour
             {
                 physicalLives.fireParticle.Stop();
                 physicalLives.timesHit--;
+                physicalLives.headLight.enabled = true;
             }
         }
 

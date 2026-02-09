@@ -14,7 +14,7 @@ namespace StarterAssets
         /// <param name="virtualMoveDirection"></param>
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
-            starterAssetsInputs.MoveInput(virtualMoveDirection);
+            starterAssetsInputs.MoveInput(virtualMoveDirection.normalized);
         }
     }
 }
