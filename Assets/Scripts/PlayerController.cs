@@ -12,12 +12,12 @@ public class PlayerController : MonoBehaviour
 
     private float speed = 50000.0f;
     private float iFramesDuration = 4.8f;
+    private float horizontalInput;
     private Rigidbody playerRb;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
     private GameManager gameManager;
-    private float horizontalInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -10,18 +10,23 @@ public class GameManager : MonoBehaviour
     public GameObject spawnManager;
     public GameObject player;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI finaleScore;
 
     private GameOverManager gameOverManager;
+    private PlayerController playerController;
+    private float score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateScoreText();
     }
 
     public void GameOver()
@@ -29,6 +34,22 @@ public class GameManager : MonoBehaviour
         retryButton.gameObject.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
+        finaleScore.gameObject.SetActive(true);
+        scoreText.gameObject.SetActive(false);
+        finaleScore.text = "Final " + scoreText.text;
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + ((int)score).ToString();
+        score += Time.deltaTime;
+
     }
 
     public void RestartGame()
