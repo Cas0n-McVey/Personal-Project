@@ -33,7 +33,7 @@ public class MobileDisableAutoSwitchControls : MonoBehaviour
 
     private void Awake()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
 #endif

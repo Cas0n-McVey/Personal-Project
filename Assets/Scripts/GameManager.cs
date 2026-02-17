@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public Button retryButton;
     public Button mainMenuButton;
+    public Button leftButton;
+    public Button rightButton;
     public GameObject spawnManager;
     public GameObject player;
     public TextMeshProUGUI gameOverText;
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         finaleScore.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(false);
+        leftButton.gameObject.SetActive(false);
+        rightButton.gameObject.SetActive(false);
         finaleScore.text = "Final " + scoreText.text;
     }
 
