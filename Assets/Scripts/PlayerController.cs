@@ -45,18 +45,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Controlls for mobile players
     public void LeftButton()
     {
+
         Debug.Log("Left button works");
-        playerRb.AddForce(Vector3.left * speed * horizontalInput * Time.deltaTime);
     }
 
+    // Controlls for mobile players
     public void RightButton()
     {
         Debug.Log("Right button works");
-        playerRb.AddForce(Vector3.right * speed * horizontalInput * Time.deltaTime);
     }
-
 
     /// <summary>
     /// To move in the new input system
