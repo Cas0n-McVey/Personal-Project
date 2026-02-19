@@ -37,6 +37,8 @@ public class ManuManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        LoadPlayer();
+        SetCarButton();
         // My music and sound effect
         music = GetComponent<AudioSource>();
         masterSlider.value = GetMasterVolume();
@@ -63,6 +65,19 @@ public class ManuManager : MonoBehaviour
         carExitButton.gameObject.SetActive(true);
     }
 
+    public static void SavePlayer()
+    {
+        SaveSystem.SavePlayer(carSelected, GameManager.highScore);
+    }
+
+    public static void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        carSelected = data.carsSelected;
+        GameManager.highScore = data.highScore;
+    }
+
     public void FreeSample()
     {
         if(freeSampleText != null)
@@ -74,6 +89,7 @@ public class ManuManager : MonoBehaviour
             lowPolyText.text = "Select";
 
             carSelected = 0;
+            SavePlayer();
         }
     }
 
@@ -88,6 +104,7 @@ public class ManuManager : MonoBehaviour
             lowPolyText.text = "Select";
 
             carSelected = 1;
+            SavePlayer();
         }
     }
 
@@ -102,6 +119,7 @@ public class ManuManager : MonoBehaviour
             lowPolyText.text = "Select";
 
             carSelected = 2;
+            SavePlayer();
         }
     }
 
@@ -116,6 +134,7 @@ public class ManuManager : MonoBehaviour
             lowPolyText.text = "Select";
 
             carSelected = 3;
+            SavePlayer();
         }
     }
 
@@ -130,6 +149,50 @@ public class ManuManager : MonoBehaviour
             lowPolyText.text = "Selected";
 
             carSelected = 4;
+            SavePlayer();
+        }
+    }
+
+    public void SetCarButton()
+    {
+        switch(carSelected)
+        {
+            case 0:
+                freeSampleText.text = "Selected";
+                hyperCarText.text = "Select";
+                redHyperCarText.text = "Select";
+                sportCarText.text = "Select";
+                lowPolyText.text = "Select";
+                break;
+            case 1:
+                freeSampleText.text = "Select";
+                hyperCarText.text = "Selected";
+                redHyperCarText.text = "Select";
+                sportCarText.text = "Select";
+                lowPolyText.text = "Select";
+                break;
+            case 2:
+                freeSampleText.text = "Select";
+                hyperCarText.text = "Select";
+                redHyperCarText.text = "Selected";
+                sportCarText.text = "Select";
+                lowPolyText.text = "Select";
+                break;
+            case 3:
+                freeSampleText.text = "Select";
+                hyperCarText.text = "Select";
+                redHyperCarText.text = "Select";
+                sportCarText.text = "Selected";
+                lowPolyText.text = "Select";
+                break;
+            case 4:
+                freeSampleText.text = "Select";
+                hyperCarText.text = "Select";
+                redHyperCarText.text = "Select";
+                sportCarText.text = "Select";
+                lowPolyText.text = "Selected";
+                break;
+
         }
     }
 

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finaleScore;
+    public static int highScore;
 
     private GameOverManager gameOverManager;
     private PlayerController playerController;

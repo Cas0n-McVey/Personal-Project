@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     public AudioSource collisionSound;
     public AudioSource explosionSound;
+    public float speed = 50000.0f;
 
-    private float speed = 50000.0f;
     private float iFramesDuration = 4.8f;
     private float horizontalInput;
     private Rigidbody playerRb;
