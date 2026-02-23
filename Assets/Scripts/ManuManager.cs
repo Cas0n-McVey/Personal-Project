@@ -65,11 +65,17 @@ public class ManuManager : MonoBehaviour
         carExitButton.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// save my player
+    /// </summary>
     public static void SavePlayer()
     {
         SaveSystem.SavePlayer(carSelected, GameManager.highScore);
     }
 
+    /// <summary>
+    /// Load my player
+    /// </summary>
     public static void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
@@ -153,6 +159,9 @@ public class ManuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// My text change depending on what button you pressed
+    /// </summary>
     public void SetCarButton()
     {
         switch(carSelected)

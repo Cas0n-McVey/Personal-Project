@@ -58,6 +58,9 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// The selected car only be active
+    /// </summary>
     void SpawnCar()
     {
         foreach (GameObject car in cars)

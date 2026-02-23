@@ -5,6 +5,11 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveSystem
 {
 
+    /// <summary>
+    /// This save my player
+    /// </summary>
+    /// <param name="newCar"></param>
+    /// <param name="bestScore"></param>
     public static void SavePlayer(int newCar, int bestScore)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -17,6 +22,10 @@ public static class SaveSystem
         stream.Close();
     }
 
+    /// <summary>
+    /// this load my player
+    /// </summary>
+    /// <returns></returns>
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.fun";
