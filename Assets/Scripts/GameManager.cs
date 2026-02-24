@@ -13,8 +13,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI finaleScore;
+    public TextMeshProUGUI finalScore;
     public static int highScore;
+    public TextMeshProUGUI highScoreText;
 
     private GameOverManager gameOverManager;
     private PlayerController playerController;
@@ -37,11 +38,15 @@ public class GameManager : MonoBehaviour
         retryButton.gameObject.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(true);
-        finaleScore.gameObject.SetActive(true);
+        finalScore.gameObject.SetActive(true);
+        highScoreText.gameObject.SetActive(true);
+
         scoreText.gameObject.SetActive(false);
         leftButton.gameObject.SetActive(false);
         rightButton.gameObject.SetActive(false);
-        finaleScore.text = "Final " + scoreText.text;
+
+        finalScore.text = "Final " + scoreText.text;
+        highScoreText.text = "High " + scoreText.text;
     }
 
     public void AddScore(int points)
@@ -54,7 +59,6 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Score: " + ((int)score).ToString();
         score += Time.deltaTime;
-
     }
 
     public void RestartGame()
