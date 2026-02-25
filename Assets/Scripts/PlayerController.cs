@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
-    private GameManager gameManager;
+    public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

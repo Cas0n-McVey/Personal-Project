@@ -595,6 +595,7 @@ MonoBehaviour:
   collisionSound: {fileID: 173110123}
   explosionSound: {fileID: 222915967}
   speed: 50000
+  gameManager: {fileID: 2067659629}
 --- !u!65 &173110121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2374,8 +2375,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.01
-  m_fontSizeBase: 55.01
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9389,8 +9390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -0.003891}
-  m_SizeDelta: {x: 1266, y: 1389}
+  m_AnchoredPosition: {x: -400, y: -0.0011597}
+  m_SizeDelta: {x: 1266, y: 1899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775043464
 MonoBehaviour:
@@ -9795,8 +9796,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.01
-  m_fontSizeBase: 55.01
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9946,8 +9947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -0.003891}
-  m_SizeDelta: {x: 1266, y: 1389}
+  m_AnchoredPosition: {x: 400, y: -0.0011597}
+  m_SizeDelta: {x: 1266, y: 1899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066886753
 MonoBehaviour:
@@ -10094,7 +10095,7 @@ MonoBehaviour:
   player: {fileID: 173110113}
   gameOverText: {fileID: 1069498876}
   scoreText: {fileID: 1263049518}
-  finalScore: {fileID: 1844144568}
+  finalScoreText: {fileID: 1844144568}
   highScoreText: {fileID: 486440490}
 --- !u!4 &2067659630
 Transform:
