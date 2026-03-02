@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public AudioSource collisionSound;
     public AudioSource explosionSound;
+    public GameManager gameManager;
     public float speed = 50000.0f;
 
     private float iFramesDuration = 4.8f;
@@ -17,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
-    public GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,6 +80,10 @@ public class PlayerController : MonoBehaviour
         horizontalInput = newMoveDir.x;
     }
 
+    /// <summary>
+    /// My physical life system and you can only tell how the car looks
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
@@ -97,18 +101,19 @@ public class PlayerController : MonoBehaviour
             if (physicalLives.timesHit == 2)
             {
                 physicalLives.smokeyParticle.Play();
+                physicalLives.headLight.enabled = false;
             }
 
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Play();
-                physicalLives.headLight.enabled = false;
+                physicalLives.headLight2.enabled = false;
             }
 
+            // At timesHit 4 is game over
             if (physicalLives.timesHit == 4)
             {
                 gameOverManager.gameOver = true;
-                physicalLives.headLight2.enabled = false;
                 gameManager.GameOver();
                 collisionSound.Stop();
                 explosionSound.Play();
@@ -119,6 +124,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Powerup give you a life back if you got hit by an enemy
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Powerup"))
@@ -136,16 +145,18 @@ public class PlayerController : MonoBehaviour
             {
                 physicalLives.smokeyParticle.Stop();
                 physicalLives.timesHit--;
+                physicalLives.headLight.enabled = true;
             } 
 
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Stop();
                 physicalLives.timesHit--;
-                physicalLives.headLight.enabled = true;
+                physicalLives.headLight2.enabled = true;
             }
         }
 
+        // Powerful gives you I-frames at amount of time given
         if(other.gameObject.CompareTag("Powerful"))
         {
             Debug.Log("Player has I-frames");
@@ -157,6 +168,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // Enable and disable the box collider at amount of time given
         IEnumerator DisableAndReEnableCollider()
         {
             if (boxCr != null)

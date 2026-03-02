@@ -18,11 +18,13 @@ public class MoveDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Makes it move down
         if (gameOverManager.gameOver == false)
         {
             objectRb.AddForce(Vector3.forward * -speed * Time.deltaTime);
         }
 
+        // Destroy game object at a specific Z axis
         if (transform.position.z < zDestroy)
         {
             Destroy(gameObject);

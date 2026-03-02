@@ -18,6 +18,9 @@ public class WheelsSpin : MonoBehaviour
     {
         MoveWheels();
     }
+    /// <summary>
+    /// Only the tires spin on the X axis
+    /// </summary>
     void MoveWheels()
     {
         if (gameOverManager.gameOver == false)

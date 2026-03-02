@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -52,12 +53,18 @@ public class ManuManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Goes the another scene for the actual game
+    /// </summary>
     public void StartVideoGame()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void CarManu()
+    /// <summary>
+    /// Goes to the Car Menu
+    /// </summary>
+    public void CarMenu()
     {
         mainMenu.gameObject.SetActive(false);
 
@@ -66,7 +73,7 @@ public class ManuManager : MonoBehaviour
     }
 
     /// <summary>
-    /// save my player
+    /// Save my player
     /// </summary>
     public static void SavePlayer()
     {
@@ -205,6 +212,9 @@ public class ManuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Goes back to the main menu
+    /// </summary>
     public void CarExit()
     {
         mainMenu.gameObject.SetActive(true);
@@ -213,6 +223,9 @@ public class ManuManager : MonoBehaviour
         carExitButton.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Goes the the Setting menu
+    /// </summary>
     public void Settings()
     {
         mainMenu.gameObject.SetActive(false);
@@ -278,6 +291,9 @@ public class ManuManager : MonoBehaviour
         masterMixer.SetFloat("MasterVol", soundLevel);
     }
 
+    /// <summary>
+    /// Goes back to the main menu
+    /// </summary>
     public void ExitSettings()
     {
         mainMenu.gameObject.SetActive(true);
@@ -290,6 +306,9 @@ public class ManuManager : MonoBehaviour
         exitButton.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Goes to the Credit menu
+    /// </summary>
     public void CreditMenu()
     {
         mainMenu.gameObject.SetActive(false);
@@ -299,6 +318,9 @@ public class ManuManager : MonoBehaviour
         exitCreditsButton.gameObject.SetActive(true);
     }
     
+    /// <summary>
+    /// Goes back to the main menu
+    /// </summary>
     public void ExitCreditsMenu()
     {
         mainMenu.gameObject.SetActive(true);
@@ -312,6 +334,9 @@ public class ManuManager : MonoBehaviour
         exitCreditsButton.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Exit the game
+    /// </summary>
     public void Quit()
     {
 #if UNITY_EDITOR

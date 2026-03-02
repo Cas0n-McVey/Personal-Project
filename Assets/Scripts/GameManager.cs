@@ -56,17 +56,26 @@ public class GameManager : MonoBehaviour
         highScoreText.text = "High Score: " + highScore;
     }
 
+    /// <summary>
+    /// Update the score for replayability
+    /// </summary>
     void UpdateScoreText()
     {
         scoreText.text = "Score: " + ((int)score).ToString();
         score += Time.deltaTime;
     }
 
+    /// <summary>
+    /// Restarts the scene
+    /// </summary>
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    /// <summary>
+    /// Goes back the Main Menu scene
+    /// </summary>
     public void MainMenu()
     {
         SceneManager.LoadScene(0);

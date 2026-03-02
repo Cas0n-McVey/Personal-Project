@@ -15,6 +15,7 @@ public class RightMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
+        // Mobile button for going right
         if (isPressed)
         {
             playerRb.AddForce(Vector3.right * Force * Time.deltaTime);
