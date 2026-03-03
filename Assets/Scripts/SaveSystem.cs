@@ -4,7 +4,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-
     /// <summary>
     /// This save my player
     /// </summary>
@@ -45,5 +44,4 @@ public static class SaveSystem
             return null;
         }
     }
-
 }

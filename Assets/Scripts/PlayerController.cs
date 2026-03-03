@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
                 physicalLives.headLight2.enabled = false;
             }
 
-            // At timesHit 4 is game over
+            // At timesHit 4 is a game over
             if (physicalLives.timesHit == 4)
             {
                 gameOverManager.gameOver = true;
@@ -148,6 +148,7 @@ public class PlayerController : MonoBehaviour
                 physicalLives.headLight.enabled = true;
             } 
 
+            // Doesn't revive you when your hit times is at 4
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Stop();
