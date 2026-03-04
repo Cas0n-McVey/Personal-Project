@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class ManuManager : MonoBehaviour
 {
     public Button playButton;
+    public Button controlButton;
     public Button settingsButton;
     public Button creditsButton;
     public Button quitButton;
@@ -22,6 +23,7 @@ public class ManuManager : MonoBehaviour
     public Canvas creditMenu;
     public Canvas settingMenu;
     public Canvas carMenu;
+    public Canvas controlMenu;
     public Slider masterSlider;
     public Slider soundSlider;
     public Slider musicSlider;
@@ -221,6 +223,20 @@ public class ManuManager : MonoBehaviour
 
         carMenu.gameObject.SetActive(false);
         carExitButton.gameObject.SetActive(false);
+    }
+
+    public void Controls()
+    {
+        mainMenu.gameObject.SetActive(false);
+
+        controlMenu.gameObject.SetActive(true);
+    }
+
+    public void ExitControls()
+    {
+        mainMenu.gameObject.SetActive(true);
+
+        controlMenu.gameObject.SetActive(false);
     }
 
     /// <summary>
