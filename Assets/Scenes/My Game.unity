@@ -549,6 +549,7 @@ Transform:
   - {fileID: 1790531719}
   - {fileID: 1418259822}
   - {fileID: 1496352462}
+  - {fileID: 222915968}
   - {fileID: 888304187}
   - {fileID: 1217494858}
   m_Father: {fileID: 0}
@@ -1041,7 +1042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 888304187}
+  m_Father: {fileID: 173110117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247638562
 GameObject:
@@ -8033,7 +8034,6 @@ Transform:
   - {fileID: 896662390}
   - {fileID: 841199079}
   - {fileID: 820242498}
-  - {fileID: 222915968}
   m_Father: {fileID: 173110117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894705953 stripped
@@ -59335,7 +59335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901182334643ba1438a25accc6bd0c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
 --- !u!114 &8890774968134944421
 MonoBehaviour:
   m_ObjectHideFlags: 0
