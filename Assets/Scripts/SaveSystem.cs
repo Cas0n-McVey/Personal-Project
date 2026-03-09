@@ -40,8 +40,9 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save file to found in " + path);
-            return null;
+            //Debug.LogError("Save file to found in " + path);
+            PlayerData data = new PlayerData(0, 0);
+            return data;
         }
     }
 }

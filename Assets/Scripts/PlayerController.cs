@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
     // Controlls for mobile players
     public void LeftButton()
     {
-
         Debug.Log("Left button works");
     }
 
