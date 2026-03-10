@@ -12,8 +12,10 @@ public class PhysicalLives : MonoBehaviour
     public ParticleSystem explosionParticle3;
     public ParticleSystem iFrames;
     public ParticleSystem removeIFrames;
+    public ParticleSystem healing;
     public Light headLight;
     public Light headLight2;
+    public Light pointLight;
     public int timesHit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

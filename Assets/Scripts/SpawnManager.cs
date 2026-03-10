@@ -16,6 +16,8 @@ public class SpawnManager : MonoBehaviour
     private float powerupSpawnTime = 5.0f;
     private float enemySpawnTime = 0.14f;
     private float startDelay = 0.0f;
+    int maxEnemies = 20;
+    int spawnEnemies = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +36,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomEnemy()
     {
-        if (gameOverManager.gameOver == false)
+        if (gameOverManager.gameOver == false && maxEnemies > spawnEnemies)
         {
             float randomX = Random.Range(-xSpawnRange, xSpawnRange);
             int randomIndex = Random.Range(0, enemies.Length);
@@ -42,7 +44,16 @@ public class SpawnManager : MonoBehaviour
             Vector3 spawnPos = new Vector3(randomX, enemyYSpawn, zEnemySpawn);
 
             Instantiate(enemies[randomIndex], spawnPos, enemies[randomIndex].gameObject.transform.rotation);
+            spawnEnemies++;
         }
+    }
+
+    public void RespawnEnemy(GameObject enemy)
+    {
+        float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+
+        Vector3 spawnPos = new Vector3(randomX, enemyYSpawn, zEnemySpawn);
+        enemy.transform.position = spawnPos;
     }
 
     void SpawnPowerup()

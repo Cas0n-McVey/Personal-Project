@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private float iFramesDuration = 4.8f;
     private float horizontalInput;
+    private float duration = 3f;
     private Rigidbody playerRb;
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         physicalLives = GetComponent<PhysicalLives>();
         gameOverManager = GetComponent<GameOverManager>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        physicalLives.pointLight.enabled = false;
     }
 
     // Update is called once per frame
@@ -131,6 +133,8 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Powerup"))
         {
+            physicalLives.healing.Play();
+            StartCoroutine(ToggleLightForeTime());
             Debug.Log("Player has trigger a power up.");
             Destroy(other.gameObject);
 
@@ -154,6 +158,13 @@ public class PlayerController : MonoBehaviour
                 physicalLives.timesHit--;
                 physicalLives.headLight2.enabled = true;
             }
+        }
+
+        IEnumerator ToggleLightForeTime()
+        {
+            physicalLives.pointLight.enabled = true;
+            yield return new WaitForSeconds(duration);
+            physicalLives.pointLight.enabled = false;
         }
 
         // Powerful gives you I-frames at amount of time given

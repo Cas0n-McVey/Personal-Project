@@ -7,12 +7,14 @@ public class MoveDown : MonoBehaviour
     private float zDestroy = -16.0f;
     private Rigidbody objectRb;
     private GameOverManager gameOverManager;
+    private SpawnManager spawnManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         objectRb = GetComponent<Rigidbody>();
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
+        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,9 @@ public class MoveDown : MonoBehaviour
         // Destroy game object at a specific Z axis
         if (transform.position.z < zDestroy)
         {
-            Destroy(gameObject);
+            objectRb.linearVelocity = Vector3.zero;
+            gameObject.SetActive(false);
+            
         }
     }
 }
