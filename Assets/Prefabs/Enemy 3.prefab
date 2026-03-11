@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5846848126699307570}
   - component: {fileID: 7458056818011163257}
   - component: {fileID: 6762857553823517118}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Enemy 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 900581388298576582}
   - component: {fileID: 1476724125128148858}
   - component: {fileID: 5991026079702765279}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Rocks_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

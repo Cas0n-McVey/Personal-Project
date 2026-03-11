@@ -24,7 +24,10 @@ public class SpawnManager : MonoBehaviour
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
         SpawnCar();
-        InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
+        if(maxEnemies > spawnEnemies)
+        {
+            InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
+        }
         InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTime);
     }
 
@@ -54,7 +57,10 @@ public class SpawnManager : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(randomX, enemyYSpawn, zEnemySpawn);
         enemy.transform.position = spawnPos;
+        enemy.GetComponent<BoxCollider>().enabled = true;
+        enemy.SetActive(true);
     }
+
 
     void SpawnPowerup()
     {

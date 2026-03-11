@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class MoveDown : MonoBehaviour
@@ -27,11 +28,17 @@ public class MoveDown : MonoBehaviour
         }
 
         // Destroy game object at a specific Z axis
-        if (transform.position.z < zDestroy)
+        if (transform.position.z < zDestroy && gameOverManager.gameOver == false)
         {
-            objectRb.linearVelocity = Vector3.zero;
             gameObject.SetActive(false);
-            
+            objectRb.linearVelocity = Vector3.zero;
+            objectRb.angularVelocity = Vector3.zero;
+            Invoke(nameof(Respawn), 0.14f);
         }
+    }
+
+    private void Respawn()
+    {
+        spawnManager.RespawnEnemy(gameObject);
     }
 }

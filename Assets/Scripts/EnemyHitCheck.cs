@@ -8,7 +8,13 @@ public class EnemyHitCheck : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       
+    }
+
+    private void OnEnable()
+    {
         boxCr = GetComponent<BoxCollider>();
+        boxCr.enabled = true;
     }
 
     // Update is called once per frame
@@ -22,7 +28,7 @@ public class EnemyHitCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Enemy has collided with a player.");
-            Destroy(boxCr);
+            boxCr.enabled = false;
         }
     }
 }

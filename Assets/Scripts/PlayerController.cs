@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource collisionSound;
     public AudioSource explosionSound;
     public GameManager gameManager;
+    public SpawnManager spawnManager;
     public float speed = 50000.0f;
 
     private float iFramesDuration = 4.8f;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider boxCr;
     private PhysicalLives physicalLives;
     private GameOverManager gameOverManager;
+    private GameObject lastHitEnemy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -90,7 +92,14 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Player has collided with an enemy.");
-            Destroy(collision.gameObject, 0.8f);
+            //collision.gameObject.SetActive(false);
+            Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
+            enemyRb.linearVelocity = Vector3.zero;
+            enemyRb.angularVelocity = Vector3.zero;
+            collision.gameObject.SetActive(false);
+            lastHitEnemy = collision.gameObject;
+            Invoke(nameof(Respawn), 0.14f);
+
             collisionSound.Play();
             physicalLives.timesHit++;
 
@@ -125,6 +134,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Respawn()
+    {
+        spawnManager.RespawnEnemy(lastHitEnemy);
+    }
+
     /// <summary>
     /// Powerup give you a life back if you got hit by an enemy
     /// </summary>
@@ -134,7 +148,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Powerup"))
         {
             physicalLives.healing.Play();
-            StartCoroutine(ToggleLightForeTime());
+            StartCoroutine(ToggleLightForTime());
             Debug.Log("Player has trigger a power up.");
             Destroy(other.gameObject);
 
@@ -160,7 +174,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        IEnumerator ToggleLightForeTime()
+        IEnumerator ToggleLightForTime()
         {
             physicalLives.pointLight.enabled = true;
             yield return new WaitForSeconds(duration);
