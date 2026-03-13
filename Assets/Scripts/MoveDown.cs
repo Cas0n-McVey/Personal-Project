@@ -33,7 +33,7 @@ public class MoveDown : MonoBehaviour
             gameObject.SetActive(false);
             objectRb.linearVelocity = Vector3.zero;
             objectRb.angularVelocity = Vector3.zero;
-            Invoke(nameof(Respawn), 0.14f);
+            Invoke(nameof(Respawn), 1f);
         }
     }
 
