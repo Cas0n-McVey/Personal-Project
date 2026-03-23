@@ -16,6 +16,7 @@ public class SpawnManager : MonoBehaviour
     private float powerupSpawnTime = 5.0f;
     private float enemySpawnTime = 0.14f;
     private float startDelay = 0.0f;
+    private float itemStartDelay = 3.5f;
     int maxEnemies = 20;
     int spawnEnemies = 0;
 
@@ -28,7 +29,7 @@ public class SpawnManager : MonoBehaviour
         {
             InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
         }
-        InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTime);
+        InvokeRepeating("SpawnPowerup", itemStartDelay, powerupSpawnTime);
     }
 
     // Update is called once per frame

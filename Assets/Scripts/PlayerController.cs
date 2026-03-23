@@ -106,18 +106,18 @@ public class PlayerController : MonoBehaviour
             if (physicalLives.timesHit == 1)
             {
                 physicalLives.smokeParticle.Play();
+                physicalLives.headLight.enabled = false;
             }
 
             if (physicalLives.timesHit == 2)
             {
                 physicalLives.smokeyParticle.Play();
-                physicalLives.headLight.enabled = false;
+                physicalLives.headLight2.enabled = false;
             }
 
             if (physicalLives.timesHit == 3)
             {
                 physicalLives.fireParticle.Play();
-                physicalLives.headLight2.enabled = false;
             }
 
             // At timesHit 4 is a game over

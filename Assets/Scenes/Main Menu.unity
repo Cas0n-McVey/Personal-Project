@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on the button, press A, and left click on some buttons
+  m_text: Click on the button, press A, and left click some buttons
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 201709241}
   - component: {fileID: 201709240}
   m_Layer: 5
-  m_Name: Asset Store Credits
+  m_Name: Asset Store and Music Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,8 +906,9 @@ MonoBehaviour:
     Hypercars by SamRK\nLow Poly Vehicle2 - FREE by Toptopology\nFREE Sample - New
     Car Style by Gudamore's Games\nSport Car Free by ALlyerEdon\nParticle Pack by
     Unity Technologies\nBaked Bread and Pastry by LUMI Studio\nLofi Instrumental
-    by FreeMusicForVideo (Music)\nCar Crash Sound and Explosion Sound Effect by DRAGON-STUDIO\n\rCartoon
-    FX Remaster Free by Jean Moreno"
+    by FreeMusicForVideo (Music)\nBackground Music by DELOSound (Music)\nCar Crash
+    Sound and Explosion Sound Effect by DRAGON-STUDIO\n\rCartoon FX Remaster Free
+    by Jean Moreno"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -934,8 +935,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.65
-  m_fontSizeBase: 27.65
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1686,7 +1687,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: A Nice Drive is a game about you dodging rocks and eating bread. I do like
     this game because I can put my silliness and ideas, but this is made because
-    of the people that helped me
+    of the people that help me
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3313,7 +3314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: wasd, arrows, buttons and gamepad are your controls
+  m_text: wasd, arrows, buttons, and gamepad are your controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4266,8 +4267,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: These buttons don't work but they do tell you where the buttons are in
-    the acutal game. Also, I spaced them out a bit so you can press the button that
-    says "Exit", you're welcome :) .
+    the actual game. Also, I spaced them out a bit so you can press the button that
+    says "Exit", you're welcome :).
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5537,7 +5538,7 @@ GameObject:
   - component: {fileID: 1160620653}
   - component: {fileID: 1160620652}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: My Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
