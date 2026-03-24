@@ -54,12 +54,15 @@ public class SpawnManager : MonoBehaviour
 
     public void RespawnEnemy(GameObject enemy)
     {
-        float randomX = Random.Range(-xSpawnRange, xSpawnRange);
+        if (gameOverManager.gameOver == false)
+        {
+            float randomX = Random.Range(-xSpawnRange, xSpawnRange);
 
-        Vector3 spawnPos = new Vector3(randomX, enemyYSpawn, zEnemySpawn);
-        enemy.transform.position = spawnPos;
-        enemy.GetComponent<BoxCollider>().enabled = true;
-        enemy.SetActive(true);
+            Vector3 spawnPos = new Vector3(randomX, enemyYSpawn, zEnemySpawn);
+            enemy.transform.position = spawnPos;
+            enemy.GetComponent<BoxCollider>().enabled = true;
+            enemy.SetActive(true);
+        }
     }
 
 

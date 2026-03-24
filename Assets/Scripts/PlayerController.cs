@@ -92,7 +92,6 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Player has collided with an enemy.");
-            //collision.gameObject.SetActive(false);
             Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
             enemyRb.linearVelocity = Vector3.zero;
             enemyRb.angularVelocity = Vector3.zero;
@@ -171,6 +170,11 @@ public class PlayerController : MonoBehaviour
                 physicalLives.fireParticle.Stop();
                 physicalLives.timesHit--;
                 physicalLives.headLight2.enabled = true;
+            }
+
+            if (physicalLives.timesHit >= 4)
+            {
+                physicalLives.secret.Play();
             }
         }
 

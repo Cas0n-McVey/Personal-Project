@@ -13,6 +13,7 @@ public class PhysicalLives : MonoBehaviour
     public ParticleSystem iFrames;
     public ParticleSystem removeIFrames;
     public ParticleSystem healing;
+    public ParticleSystem secret;
     public Light headLight;
     public Light headLight2;
     public Light pointLight;
