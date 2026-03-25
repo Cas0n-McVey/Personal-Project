@@ -16,7 +16,7 @@ public class LeftMove : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     void Update()
     {
         // Mobile button for going left
-        if(isPressed)
+        if (isPressed)
         {
             playerRb.AddForce(Vector3.right * Force * Time.deltaTime);
         }

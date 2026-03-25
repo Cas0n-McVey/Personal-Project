@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ToggleLightForTime());
             Debug.Log("Player has trigger a power up.");
             Destroy(other.gameObject);
+            spawnManager.spawnPowerUp--;
 
             if (physicalLives.timesHit == 1)
             {

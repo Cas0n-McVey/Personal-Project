@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class WheelsSpin : MonoBehaviour
 {
-    private float wheelSpeed = 1000.0f;
+    private float wheelSpeed = 1500.0f;
     private GameOverManager gameOverManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,6 +18,7 @@ public class WheelsSpin : MonoBehaviour
     {
         MoveWheels();
     }
+
     /// <summary>
     /// Only the tires spin on the X axis
     /// </summary>

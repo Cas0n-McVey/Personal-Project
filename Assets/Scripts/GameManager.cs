@@ -15,12 +15,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
-    public static int highScore;
     public TextMeshProUGUI highScoreText;
+    public static int highScore;
 
     private float score;
     private GameOverManager gameOverManager;
     private PlayerController playerController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

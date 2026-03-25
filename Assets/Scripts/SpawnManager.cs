@@ -19,6 +19,8 @@ public class SpawnManager : MonoBehaviour
     private float itemStartDelay = 3.5f;
     int maxEnemies = 20;
     int spawnEnemies = 0;
+    int maxPowerUp = 3;
+    public int spawnPowerUp = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,7 +70,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPowerup()
     {
-        if (gameOverManager.gameOver == false)
+        if (gameOverManager.gameOver == false && maxPowerUp > spawnPowerUp)
         {
             float randomX = Random.Range(-xSpawnRange, xSpawnRange);
             int randomIndex = Random.Range(0, powerup.Length);
@@ -76,6 +78,12 @@ public class SpawnManager : MonoBehaviour
             Vector3 spawnPos = new Vector3(randomX, itemYSpawn, zPowerupSpawn);
 
             Instantiate(powerup[randomIndex], spawnPos, powerup[randomIndex].gameObject.transform.rotation);
+            spawnPowerUp++;
+            
+            if (maxPowerUp == spawnPowerUp)
+            {
+                Debug.Log("Can't spawn more power ups");
+            }
         }
     }
 

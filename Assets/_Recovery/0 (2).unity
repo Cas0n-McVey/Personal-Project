@@ -5094,7 +5094,6 @@ MonoBehaviour:
   - {fileID: 1418259818}
   - {fileID: 9111804332623832603}
   - {fileID: 1496352458}
-  spawnPowerUp: 0
 --- !u!4 &63801828
 Transform:
   m_ObjectHideFlags: 0
@@ -7224,7 +7223,7 @@ GameObject:
   - component: {fileID: 466206125}
   - component: {fileID: 466206124}
   m_Layer: 0
-  m_Name: Left Headlight
+  m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13314,7 +13313,7 @@ GameObject:
   - component: {fileID: 964240398}
   - component: {fileID: 964240397}
   m_Layer: 0
-  m_Name: Right Headlight
+  m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
