@@ -27,10 +27,7 @@ public class SpawnManager : MonoBehaviour
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
         SpawnCar();
-        if(maxEnemies > spawnEnemies)
-        {
-            InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
-        }
+        InvokeRepeating("SpawnRandomEnemy", startDelay, enemySpawnTime);
         InvokeRepeating("SpawnPowerup", itemStartDelay, powerupSpawnTime);
     }
 
