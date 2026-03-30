@@ -5837,6 +5837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free Sample
       objectReference: {fileID: 0}
+    - target: {fileID: 4073077062540788037, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4480203487947895870, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -5893,7 +5897,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4073077062540788037, guid: 19abb9f5abee9ee46bf8d894243ad482, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

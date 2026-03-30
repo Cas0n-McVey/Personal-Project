@@ -19,7 +19,7 @@ public class SpawnManager : MonoBehaviour
     private float itemStartDelay = 3.5f;
     int maxEnemies = 20;
     int spawnEnemies = 0;
-    int maxPowerUp = 3;
+    int maxPowerUp = 4;
     public int spawnPowerUp = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

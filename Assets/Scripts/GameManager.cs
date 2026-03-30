@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,13 +11,17 @@ public class GameManager : MonoBehaviour
     public Button mainMenuButton;
     public Button leftButton;
     public Button rightButton;
+    public Button pauseButton;
     public GameObject spawnManager;
     public GameObject player;
+    public GameObject pauseMenuUI;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
     public TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI pauseHighScoreText;
     public static int highScore;
+    public static bool gameIsPaused = false;
 
     private float score;
     private GameOverManager gameOverManager;
@@ -33,6 +38,41 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         UpdateScoreText();
+
+
+        if (gameIsPaused == false && gameOverManager.gameOver == false)
+        {
+            Resume();
+        }
+        else
+        {
+            if (gameOverManager.gameOver == false)
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        pauseButton.gameObject.SetActive(true);
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        pauseButton.gameObject.SetActive(false);
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        pauseHighScoreText.text = "High Score: " + highScore;
     }
 
     public void GameOver()
@@ -46,6 +86,7 @@ public class GameManager : MonoBehaviour
         scoreText.gameObject.SetActive(false);
         leftButton.gameObject.SetActive(false);
         rightButton.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(false);
 
         if(score > highScore)
         {
