@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverManager = GameObject.Find("Player").GetComponent<GameOverManager>();
+        pauseMenuUI.SetActive(false);
+        gameIsPaused = false;
         score = 0;
     }
 
@@ -39,17 +41,31 @@ public class GameManager : MonoBehaviour
     {
         UpdateScoreText();
 
-
         if (gameIsPaused == false && gameOverManager.gameOver == false)
         {
             Resume();
         }
         else
         {
-            if (gameOverManager.gameOver == false)
+            if (gameIsPaused == true && gameOverManager.gameOver == false)
             {
                 Pause();
             }
+        }
+        
+        
+    }
+
+    public void HandlePause()
+    {
+        gameIsPaused = !gameIsPaused;
+        if(gameIsPaused && gameOverManager.gameOver == false)
+        {
+            Pause();
+        }
+        else if (gameIsPaused == false && gameOverManager.gameOver == false)
+        {
+            Resume();
         }
     }
 
@@ -87,6 +103,9 @@ public class GameManager : MonoBehaviour
         leftButton.gameObject.SetActive(false);
         rightButton.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(false);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         if(score > highScore)
         {

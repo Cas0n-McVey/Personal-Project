@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public SpawnManager spawnManager;
     public float speed = 50000.0f;
+    public bool isPaused;
 
     private float iFramesDuration = 4.8f;
     private float horizontalInput;
@@ -72,6 +73,11 @@ public class PlayerController : MonoBehaviour
         {
             horizontalInput = inputValue.Get<Vector2>().x;
         }
+    }
+
+    public void OnPause(InputValue inputValue)
+    {
+        gameManager.HandlePause();
     }
 
     /// <summary>
