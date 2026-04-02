@@ -162,13 +162,14 @@ public class PlayerController : MonoBehaviour
             {
                 physicalLives.smokeParticle.Stop();
                 physicalLives.timesHit--;
+                physicalLives.headLight.enabled = true;
             }
 
             if (physicalLives.timesHit == 2)
             {
                 physicalLives.smokeyParticle.Stop();
                 physicalLives.timesHit--;
-                physicalLives.headLight.enabled = true;
+                physicalLives.headLight2.enabled = true;
             } 
 
             // Doesn't revive you when your hit times is at 4
@@ -176,7 +177,6 @@ public class PlayerController : MonoBehaviour
             {
                 physicalLives.fireParticle.Stop();
                 physicalLives.timesHit--;
-                physicalLives.headLight2.enabled = true;
             }
 
             if (physicalLives.timesHit >= 4)

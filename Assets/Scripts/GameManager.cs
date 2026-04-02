@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         pauseButton.gameObject.SetActive(true);
+        scoreText.gameObject.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         pauseButton.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(false);
         Time.timeScale = 0f;
         gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
