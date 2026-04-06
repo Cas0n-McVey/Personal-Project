@@ -21,7 +21,7 @@ public class MobileDisableAutoSwitchControls : MonoBehaviour
 
     private void Awake()
     {
-        Destroy(this.gameObject);
+        gameObject.SetActive(this);
     }
 
 #endif
