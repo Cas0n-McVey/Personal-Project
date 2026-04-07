@@ -34,11 +34,6 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         gameIsPaused = false;
         score = 0;
-
-        if (Application.isMobilePlatform)
-        {
-            pauseButton.gameObject.SetActive(false);
-        }
     }
 
     // Update is called once per frame
@@ -57,8 +52,6 @@ public class GameManager : MonoBehaviour
                 Pause();
             }
         }
-        
-        
     }
 
     public void HandlePause()
@@ -77,16 +70,12 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        pauseButton.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        if(Application.isMobilePlatform)
-        {
-            pauseButton.gameObject.SetActive(true);
-        }
     }
 
     public void Pause()
@@ -110,14 +99,10 @@ public class GameManager : MonoBehaviour
         finalScoreText.gameObject.SetActive(true);
         highScoreText.gameObject.SetActive(true);
 
+        leftButton.gameObject.SetActive(false);
+        rightButton.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
-
-        if(Application.isMobilePlatform)
-        {
-            leftButton.gameObject.SetActive(false);
-            rightButton.gameObject.SetActive(false);
-            pauseButton.gameObject.SetActive(false);
-        }
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
