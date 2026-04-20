@@ -13750,7 +13750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016336484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14927,7 +14927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1624390895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15591,7 +15591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1812725461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15760,7 +15760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1839791041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16349,6 +16349,9 @@ MonoBehaviour:
   leftButton: {fileID: 1775043464}
   rightButton: {fileID: 2066886753}
   pauseButton: {fileID: 2113408437}
+  resumeButton: {fileID: 1016336485}
+  mainMenuButton2: {fileID: 1624390896}
+  image: {fileID: 1839791042}
   spawnManager: {fileID: 63801826}
   player: {fileID: 173110113}
   pauseMenuUI: {fileID: 1371915341}

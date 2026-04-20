@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,9 @@ public class GameManager : MonoBehaviour
     public Button leftButton;
     public Button rightButton;
     public Button pauseButton;
+    public Button resumeButton;
+    public Button mainMenuButton2;
+    public Image image;
     public GameObject spawnManager;
     public GameObject player;
     public GameObject pauseMenuUI;
@@ -76,17 +80,23 @@ public class GameManager : MonoBehaviour
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        EventSystem.current.SetSelectedGameObject(pauseButton.gameObject);
     }
 
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
+        resumeButton.gameObject.SetActive(true);
+        mainMenuButton2.gameObject.SetActive(true);
+        pauseHighScoreText.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         pauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
         Time.timeScale = 0f;
         gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        EventSystem.current.SetSelectedGameObject(resumeButton.gameObject);
 
         pauseHighScoreText.text = "High Score: " + highScore;
     }
@@ -98,6 +108,8 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         finalScoreText.gameObject.SetActive(true);
         highScoreText.gameObject.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(retryButton.gameObject);
 
         leftButton.gameObject.SetActive(false);
         rightButton.gameObject.SetActive(false);
