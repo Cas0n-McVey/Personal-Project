@@ -16346,8 +16346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   retryButton: {fileID: 391906322}
   mainMenuButton: {fileID: 351635434}
-  leftButton: {fileID: 1775043464}
-  rightButton: {fileID: 2066886753}
+  leftButton: {fileID: 1775043462}
+  rightButton: {fileID: 2066886751}
   pauseButton: {fileID: 2113408437}
   resumeButton: {fileID: 1016336485}
   mainMenuButton2: {fileID: 1624390896}

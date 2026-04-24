@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 {
     public Button retryButton;
     public Button mainMenuButton;
-    public Button leftButton;
-    public Button rightButton;
+    public GameObject leftButton;
+    public GameObject rightButton;
     public Button pauseButton;
     public Button resumeButton;
     public Button mainMenuButton2;
@@ -38,6 +38,14 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         gameIsPaused = false;
         score = 0;
+
+#if (UNITY_IOS || UNITY_ANDROID)
+        leftButton.SetActive(true);
+        rightButton.SetActive(true);
+#else
+        leftButton.SetActive(false);
+        rightButton.SetActive(false);
+#endif
     }
 
     // Update is called once per frame
@@ -74,6 +82,10 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        resumeButton.gameObject.SetActive(false);
+        mainMenuButton2.gameObject.SetActive(false);
+        pauseHighScoreText.gameObject.SetActive(false);
+        image.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(true);
         Time.timeScale = 1f;
