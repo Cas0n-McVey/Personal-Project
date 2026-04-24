@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 {
     public Button retryButton;
     public Button mainMenuButton;
-    public GameObject leftButton;
-    public GameObject rightButton;
+    public Button leftButton;
+    public Button rightButton;
     public Button pauseButton;
     public Button resumeButton;
     public Button mainMenuButton2;
@@ -38,13 +38,16 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         gameIsPaused = false;
         score = 0;
+        Resume();
 
 #if (UNITY_IOS || UNITY_ANDROID)
-        leftButton.SetActive(true);
-        rightButton.SetActive(true);
+        leftButton.gameObject.SetActive(true);
+        rightButton.gameObject.SetActive(true);
+        pauseButton.gameObject.SetActive(true);
 #else
-        leftButton.SetActive(false);
-        rightButton.SetActive(false);
+        leftButton.gameObject.SetActive(false);
+        rightButton.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(false);
 #endif
     }
 
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateScoreText();
 
-        if (gameIsPaused == false && gameOverManager.gameOver == false)
+       /* if (gameIsPaused == false && gameOverManager.gameOver == false)
         {
             Resume();
         }
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
             {
                 Pause();
             }
-        }
+        }*/
     }
 
     public void HandlePause()
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
         {
             Resume();
         }
+        
     }
 
     public void Resume()
@@ -92,7 +96,6 @@ public class GameManager : MonoBehaviour
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        EventSystem.current.SetSelectedGameObject(pauseButton.gameObject);
     }
 
     public void Pause()
